@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Insurance System</title>
+	<style type="text/css">
+.active {
+background-color: orange;
+}
+body{
+  background-color: pink;
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+.topnav {
+  background-color: indigo;
+  overflow: hidden;
+}
+.topnav a {
+  float: right;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+.top-left {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+ font-size:xx-large;
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: indigo;
+  color: pink;
+  word-spacing: 5px;
+}
+.header h1 {
+  font-size: 40px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar {
+  overflow: hidden;
+  background-color: pink;
+}
+.navbar a {
+  float: left;
+
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+		.class1 {
+			display: grid;
+			width: 98%;
+			grid-template-columns: 50% 50%;
+
+			grid-auto-rows: minmax(600px, auto);
+			/*padding: 275px;*/
+			grid-gap: 25px;
+		}
+		.class1 div:nth-child(odd) {
+			border: 2px solid red;
+			border-radius: 5px;
+			display: grid;
+			grid-template-rows: 95% 5%;
+		}
+		.right h3 button {
+			padding: 3px 6px;
+			margin: 13px;
+			color: white;
+			background-color: orange;
+			border-radius: 8px;
+
+		}
+		input {
+			width: 75%;
+			height: 85%;
+			border-radius: 25px;
+		}
+		#btn {
+			border-radius: 25px;
+			background-color : indigo;
+			color: white;
+			height: 100%;
+			width: 20%;
+			float: right;
+		}
+		#btn:hover {
+			background-color: orange;
+			color: grey;
+		}
+		#chatLog{
+			background-color: pink;
+			color: indigo;
+			margin: 8px;
+		}
+		/*.class1 div:nth-child(even) {
+			border: 1px solid red;
+			display: grid;
+			grid-template-rows: 10% 10% 10% 10% 10%;
+		}*/
+		/*.right {
+			border: 1px solid red;
+			display: grid;
+			grid-template-rows: 10% 10% 10% 10% 10%;
+		}*/
+		.class1 div > div {
+			/*border: 2px solid blue;*/
+		}
+	</style>
+	<script type="text/javascript">
+
+		level1 = {
+			"Get Bot Assistance" : "How May I Help You !",
+			"Ask a Question" : "What is your Query",
+			"what you can do?" : "I can help you out with basic instructions",
+			"How can I rectify my Issue" : "&nbsp &nbsp &nbsp &nbsp &nbspPlease mention your Account Details)"
+		};
+		level2 = {
+			"Does your health insurance policy cover routine tests?" : "Yes. In Covers Medical expenses after Hospitalization",
+			"What does the Health Insurance policy cover?" : "Medical Expenses for Hospitalization",
+			"How much of my money will be invested for life insurance? : "50 percent for Life ins and 50 percent of money for Savings"
+			"Does the policy provide living benefits?" : "With profits plans offer Living benefits and Term plans offer only Death benefits and we also provide Loans on your Policies"
+			"When can I expect returns?" : "Returns depend on the Age and Term of Policy"
+			"What happens to life insurance as I age?" : "By taking With Profit or Guaranteed Return Life insurance Policy"
+		}
+		level21 = {
+			"yes": "Okay. You may have problem with database we will work on it :)",
+			"no" : "May be your account was hacked !"
+		}
+		level22 = {
+			"Thank you its very helpful" : "Feel free to approach me for any kind of Isssue",
+			"You are trash" : "(-_-) sorry, my bad |||||"
+		}
+		level23 = {
+			"you are the best" : "Feel free to approach me for any kind of Isssue"
+		}
+		level211 = {
+			"Thank you bot" : "You are Welcome..Feel free to approach me for any kind of Isssue",
+			"Damn it!" : "Feel free to approach me for any kind of Isssue"
+		}
+		var levelcount = 1;
+		function fun() {
+
+		var user = document.getElementById("chatting").value;
+			// var one = document.getElementById("one").value;
+			// var two = document.getElementById("two").value;
+			// var three = document.getElementById("three").value;
+			// var four = document.getElementById("four").value;
+			document.getElementById("chatting").value = "";
+			document.getElementById("chatLog").innerHTML += user+"<br>";
+			if(user in level1 && levelcount==1) {
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level1[user] + "<br>"+"YOU:-...";
+
+				document.getElementById("one").innerHTML = document.getElementById("one").value = "I am not able to complete my profile.";
+
+				// console.log(document.getElementById("one").value);
+				document.getElementById("two").innerHTML = document.getElementById("two").value = "I have problem with my payments";
+				document.getElementById("three").innerHTML = document.getElementById("three").value = "I just forget my password";
+				document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				levelcount ++;
+			}
+			else if(user in level2 && levelcount==2) {
+				if(user == "I am not able to complete my profile.") {
+					// document.getElementById("instructions").innerHTML ="yes<br><br>no";
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "yes";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "no";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				else if(user == "I have problem with my payments") {
+					// document.getElementById("instructions").innerHTML ="thank you its very helpful<br><br>you are trash";
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "thank you its very helpful";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "you are trash";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				else if(user == "I just forget my password") {
+					// document.getElementById("instructions").innerHTML ="thank you";
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "you are the best";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level2[user] + "<br>"+"YOU:-...";
+				// document.getElementById("instructions").innerHTML ="I am not able to complete my profile.<br><br>I have problem with my payments<br><br>I just forget my password<br><br>";
+				levelcount ++;
+			}
+			else if(user in level21 && levelcount==3) {
+				if(user == "yes") {
+					// document.getElementById("instructions").innerHTML = "thank you bot";
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "thank you bot";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				else if(user == "no") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "damn it!";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level21[user] + "<br>"+"YOU:-...";
+				levelcount++;
+			}
+			else if(user in level22 && levelcount==3) {
+				if(user == "thank you its very helpful") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "you can exit now";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				else if(user == "you are trash") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "nothing to show here you can quit!";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level22[user] + "<br>"+"YOU:-...";
+				levelcount++;
+			}
+			else if(user in level23 && levelcount==3) {
+				if(user == "you are the best") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "Bot: Thank you for visiting. TC";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level23[user] + "<br>"+"YOU:-...";
+				levelcount++;
+			}
+			else if(user in level211 && levelcount==4) {
+				if(user == "thank you bot") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "Bot: I am always happy to help you";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				else if(user == "damn it!") {
+					document.getElementById("one").innerHTML = document.getElementById("one").value = "Bot:Hello I am here... You Better Exit dude!";
+					document.getElementById("two").innerHTML = document.getElementById("two").value = "-";
+					document.getElementById("three").innerHTML = document.getElementById("three").value = "-";
+					document.getElementById("four").innerHTML = document.getElementById("four").value = "-";
+				}
+				document.getElementById("chatLog").innerHTML += "BOT:-"+ level211[user] + "<br>"+"YOU:-...";
+				levelcount++;
+			}
+			else {
+				document.getElementById("chatLog").innerHTML += "What was that? <br>";
+				console.log(levelcount);
+			}
+
+		}
+
+		function class1(class2) {
+			document.getElementById("chatting").value = class2;
+		}
+		function thor(sri) {
+			document.getElementById("chatting").value = document.getElementById(sri).value;
+		}
+	</script>
+</head>
+<body>
+<div class="header">
+<h1>INSUREASY</h1>
+</div>
+<div class="navbar">
+  <a href="index.html" class="right">HOME</a>
+</div>
+	<div class="class1">
+		<div>
+			<div id="chatLog">YOU:-</div>
+			<div><input id="chatting" type="text" name="" placeholder="Enter Query">
+				<button id="btn" type="submit" onclick="fun()">Send</button>
+			</div>
+		</div>
+		<div class="right">
+			<h3 id="instructions">
+				<a href="health.html"> <button id="one" style="width: 80%">Where can I get Health Insurance?</button></a>
+				<a href="life.html"> <button id="two" style="width: 80%">Where can I get Life Insurance?</button></a>
+				<a href="loan.html"> <button id="three" style="width: 80%">Where can I get Loan on my Insurance Policy?</button></a>
+				<a href="claim.html"> <button id="four" style="width: 80%">Where can I get Claims?</button></a></h3>
+		</div>
+	</div>
+
+</body>
+</html>

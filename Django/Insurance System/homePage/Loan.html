@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html background-color="blue">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style >
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #ddd;
+}
+.navbar a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: baby pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: white;
+}
+.font {
+background-color:sky blue
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers tr:nth-child(even){background-color: pink;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: purple;
+  color: white;
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+.container {
+  background-color: pink;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid pink;
+  border-radius: 3px;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+.btn {
+  background-color: indigo;
+  color: indigo;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: purple;
+}
+a {
+  color: #2196F3;
+}
+hr {
+  border: 1px solid pink;
+}
+span.price {
+  float: right;
+  color: indigo;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: indigo;
+  color: pink;
+  word-spacing: 5px;
+}
+.header h1 {
+  font-size: 40px;
+}
+.active {
+  background-color: yellow;
+}
+.topnav {
+  background-color: indigo;
+  overflow: hidden;
+}
+.topnav a {
+  float: right;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+.top-left {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+ font-size:xx-large;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>INSUREASY</h1>
+</div>
+<div class="navbar">
+  <a href="about.html" class="right">About Us</a>
+  <a href="index.html" class="right">Home</a>
+  <a href="contact.html" class="right">Contact Us</a>
+</div>
+<table id="customers">
+  <tr>
+    <th>Loan Amount</th>
+    <th>Loan Period</th>
+    <th>Tax</th>
+  </tr>
+  <tr>
+    <td>100000</td>
+    <td>12Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>300000</td>
+    <td>13Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>500000</td>
+    <td>15Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>1000000</td>
+    <td>17Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>1300000</td>
+    <td>19Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>1500000</td>
+    <td>24Months</td>
+    <td>5%</td>
+  </tr>
+  <tr>
+    <td>1800000</td>
+    <td>29Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>2000000</td>
+    <td>35Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>2300000</td>
+    <td>40Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>2500000</td>
+    <td>47Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>3000000</td>
+    <td>52Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>3500000</td>
+    <td>62Months</td>
+    <td>7%</td>
+  </tr>
+  <tr>
+    <td>3900000</td>
+    <td>70Months</td>
+    <td>7%</td>
+  </tr>
+</table>
+
+<h2>LOAN</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-50">
+            <h3>DETAILS</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Full Name">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="Email ID">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Address">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="City">
+            <h3>Gender</h3>
+              <input type="text" placeholder="M/F/O" name="gender">
+            <br>
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+            <label for="ccnum">Policy number</label>
+            <input type="text" id="ccnum" name="Policynumber" placeholder="1111222233334444">
+             <h3>Loan</h3>
+             <input type="text" name="insurance" placeholder="Health/Life"><br><br>
+             <h3>Kindly Attach Insurance Statements</h3>
+            <input type="file" id="myFile"><br><br>
+          </div>
+        </div>
+        <div class="btn">
+        <a href="index.html" input type="submit">Submit Application</a>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

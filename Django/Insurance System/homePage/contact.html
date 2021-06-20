@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      *{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.contact-section{
+  background: url(https://previews.123rf.com/images/o0matze0o/o0matze0o1805/o0matze0o180500018/101535114-website-and-internet-contact-us-page-concept-with-hanging-icons-in-front-of-a-silver-background.jpg) no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  padding: 40px 0;
+}
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: indigo;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #ADD8E6;
+  padding: 20px 40px;
+  outline: none;
+  color: #000000;
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px purple;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover{
+  background: purple;
+}
+.navbar {
+  overflow: hidden;
+  background-color: pink;
+}
+.navbar a {
+  float: left;
+
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+h1{
+  font-size:50px;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: indigo;
+  color: pink;
+  word-spacing: 5px;
+}
+.active {
+  background-color: yellow;
+}
+.header h1 {
+  font-size: 40px;
+}
+
+</style>
+  </head>
+  <body>
+  <div class="header">
+<h1>Feel Free To Contact Us</h1>
+</div>
+<div class="navbar">
+  <a href="about.html" class="right">About Us</a>
+  <a href="index.html" class="right">Home</a>
+</div>
+<div class="contact-section">
+    <div class="border"></div>
+  <form class="contact-form" action="contact.html" method="post">
+    <input type="text" class="contact-form-text" placeholder="Your name" input required>
+    <input type="email" class="contact-form-text" placeholder="Your email" input required>
+    <input type="text" class="contact-form-text" placeholder="Your phone" input required>
+    <textarea class="contact-form-text" placeholder="Your message"></textarea>
+    <input type="submit" class="contact-form-btn" value="Send">
+  </form>
+</div>
+
+
+  </body>
+</html>

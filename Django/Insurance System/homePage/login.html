@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Login And Registration Form</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image:url("https://i.pinimg.com/564x/04/54/ef/0454efd9ad1c8f458e4c2822934b5130.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 650px;
+    position: relative;
+    margin: 6% auto;
+    background: pink;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px blue;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, brown, red);
+    border-radius: 30px;
+    transition: .5s;
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 purple;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, indigo, orange);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 50px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: pink;
+}
+.navbar a {
+  float: left;
+
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+h1{
+  font-size:50px;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: indigo;
+  color: pink;
+  word-spacing: 5px;
+}
+.active {
+  background-color: yellow;
+}
+.header h1 {
+  font-size: 40px;
+}
+
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>INSUREASY</h1>
+</div>
+<div class="hero">
+    <div class="form-box" size="50">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" class="toggle-btn" onclick="register()">Sign up</button>
+        </div>
+        <form id="login" class="input-group" method="POST">
+            {% csrf_token %}
+            <br><br><br><label><i class="fa fa-address-card-o"></i> User Name</label>
+            <input type="text" class="input-field" placeholder=UserName name="username" required><br><br><br>
+            <label><i class="fa fa-address-card-o"></i> Password</label>
+            <input type="password" class="input-field" placeholder="Enter Password" name="password" required><br><br><br><div>
+<!--                {% for message in messages %}-->
+<!--                <h3 style="color:red; font-family: Arial, Helvetica, sans-serif;">-->
+<!--                    {{message}}-->
+<!--                </h3>-->
+<!--                {% endfor %}-->
+                <a href="index.html">
+                    <input type="button" class="submit-btn" value="Login"/></a>
+            </div>
+        </form>
+        <form id="register" class="input-group" method="POST">
+            {% csrf_token %}
+            <br><label><i class="fa fa-address-card-o"></i> User Name</label>
+            <input type="text" class="input-field" placeholder=UserName name="username" required>
+            <label><i class="fa fa-address-card-o"></i>Email ID</label>
+            <input type="text" class="input-field" placeholder="Email ID" name="email" required>
+            <label><i class="fa fa-address-card-o"></i> Password</label>
+            <input type="password" class="input-field" placeholder="Enter Password" name="password1" required>
+            <label><i class="fa fa-address-card-o"></i>Confirm Password</label>
+            <input type="password" class="input-field" placeholder="Enter Password" name="password2" required>
+            <label><i class="fa fa-address-card-o"></i> Date of Birth</label>
+            <input type="text" class="input-field" placeholder="dd/mm/yyyy" name="DOB" required>
+            <label>Gender</label>
+            <input type="text" class="input-field" name="gender"><br><br><br>
+<!--            <div>{% for message in messages %}-->
+<!--                <h3 style="color:red; font-family: Arial, Helvetica, sans-serif;">-->
+<!--                    {{message}}-->
+<!--                </h3>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+                <a href="index.html">
+                    <input type="button" class="submit-btn" value="Register"/></a>
+
+        </form>
+    </div>
+</div>
+<script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+            register()
+
+
+
+</script>
+</body>
+</html>

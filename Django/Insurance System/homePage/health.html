@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Health Insurance</title>
+        <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image:url("https://th.bing.com/th/id/OIP.xSmMFAjF5TgYDes1v3h9XwHaDT?w=283&h=156&c=7&o=5&dpr=1.4&pid=1.7");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 567px;
+    position: relative;
+    margin: 6% auto;
+    background: pink;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px blue;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, brown, red);
+    border-radius: 30px;
+    transition: .5s;
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 purple;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, indigo, orange);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#register{
+    left: 450px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: pink;
+}
+.navbar a {
+  float: left;
+
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+h1{
+  font-size:50px;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: indigo;
+  color: pink;
+  word-spacing: 5px;
+}
+.active {
+  background-color: yellow;
+}
+.header h1 {
+  font-size: 40px;
+}
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: pink;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: purple;
+  color: white;
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: pink;
+  padding: 5px 20px 15px 20px;
+  border: 1px purple;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: purple;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: indigo;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid purple;
+}
+
+span.price {
+  float: right;
+  color: indigo;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>HEALTH INSURANCE</h1>
+</div>
+<div class="navbar">
+  <a href="about.html" class="right">About Us</a>
+  <a href="index.html" class="right">Home</a>
+  <a href="contact.html" class="right">Contact Us</a>
+</div>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-50">
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Full Name">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="Email ID">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Address">
+              <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="State">
+             <div class="row">
+              <div class="col-50">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="City">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+              <label for="dob"><i class="fa fa-institution"></i>Date Of Birth</label>
+              <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy"><br><br>
+            <h3>Gender</h3><br>
+            <form>
+              <input type="radio" id="male" name="gender" value="male">Male
+              <input type="radio" id="female" name="gender" value="female">Female
+              <input type="radio" id="other" name="gender" value="other">Other<br>
+            </form><br>
+              <h3>Kindly Attach your Health Report</h3><br>
+            <input type="file" id="myFile"><br><br>
+          </div>
+        </div>
+        <div class="btn">
+        <a href="index.html" input type="submit">Submit Application</a>
+      </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
